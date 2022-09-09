@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Food Order Website</title>
+   <link rel="stylesheet" href="./css/food.css">
+   <script src="https://kit.fontawesome.com/54ce8c47a1.js"></script>
+</head>
+<body>
+   <main>
+      <div class="icons">
+         <div class="burger">
+            <label for="check" class="menu-btn">
+               <input type="checkbox" name="check" id="check" class="hamburger-btn btn-2">
+               <div class="items"></div>
+            </label>
+         </div>
+         <i class="fa-regular fa-heart fa-xl"></i>
+         <i class="fa-regular fa-archway"></i>
+
+         <i class="fa-regular fa-credit-card"></i>
+         <i class="fa-regular fa-chart-tree-map"></i>
+      </div>
+      <section class="second">
+         <div class="parent">
+            <input type="search" name="search" id="search" placeholder="Search....">
+            <button type="submit" class="button">
+               <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+         </div>
+         <div class="fit">
+           <aside>
+              <h2>30% Off <br>Fitness meal</h2>
+              <p>Don't Wait!!!</p>
+              <p>Let start to order food now!</p>
+              <p class="but">CHECK OUR MENU</p>
+           </aside>
+           <div class="opacity">
+              <p>Don't Wait!!!</p>
+              <p>Let start to order food now!</p>
+              <p class="but">CHECK OUT STREAK MENU</p>
+           </div>
+         </div>
+         <div class="flex">
+            <aside>
+               <i class="fa-solid fa-location-dot" style="color: #ff6600;"></i>
+               <p>Nereby</p>
+            </aside>
+            <aside>
+               <i class="fa-solid fa-grip-dots" style="color: #ff6600;"></i>
+               <p>Promotion</p>
+            </aside>
+            <aside>
+               <i class="fa-solid fa-user" style="color: #ff6600;"></i>
+               <p>Newcomers</p>
+            </aside>
+            <aside>
+               <i class="fa-solid fa-check-to-slot" style="color: #ff6600;"></i>
+               <p>Best Sellers</p>
+            </aside>
+            <aside>
+               <i class="fa-regular fa-star" style="color: #ff6600;"></i>
+               <p>Top Rated</p>
+            </aside>
+         </div>
+         <div class="content">
+            <div class="food">
+               <img src="./img/burger.jpg" alt="">
+               <aside>
+                  <p>Burgor Mozza</p>
+                  <p>$39</p>
+               </aside>
+               <h5>Burger queen</h5>
+            </div>
+            <div class="food">
+               <img src="./img/Gobhi-Manchurian-recipe-chinese-starters-1920x1080.jpg" alt="">
+               <aside>
+                  <p>Vog Manchurian </p>
+                  <p>$50</p>
+               </aside>
+               <h5>Chinese</h5>
+            </div>
+            <div class="food">
+               <img src="./img/salad.jpg" alt="">
+               <aside>
+                  <p>Veggie Salad</p>
+                  <p>$15</p>
+               </aside>
+               <h5>Salad</h5>
+            </div>
+         </div>
+      </section>
+      <section class="three">
+         <h2>My Orders</h2>
+         <div class="address">
+            <h4>Delivery address</h4>
+            <h1>1341 Morris street  <span><i class="fa-solid fa-chevron-down"></i></span></h1>
+            <aside>
+               <h5><i class="fa-solid fa-clock-twelve-thirty"></i> <span>40 mins</span></h5>
+               <h5><i class="fa-solid fa-location-dot"></i><span>4 kms</span></h5>
+            </aside>
+         </div>
+         <div class="orders">
+            <div class="box">
+               <img src="./img/mac.jpg" alt="">
+               <aside>
+                  <p>Mac and Cheese XL <br>Extra cheese</p>
+                  <label for="#" style="color: gray;"> X 
+                     <select name="food" id="food">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                   </select>
+                  </label>
+               </aside>
+           </div>
+           <h1>$39</h1>
+         </div>
+         <div class="box pizza">
+            <img src="./img/pizza.jpg" alt="">
+            <aside>
+               <p>Pizza XL <br>Extra cheese</p>
+               <label for="#" style="color: gray;"> X 
+                  <select name="food" id="food">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                </select>
+               </label>
+            </aside>
+           <h1>$39</h1>
+        </div>
+        <hr>
+        <div class="total">
+         <h5>Sub total </h5>
+         <p>$78</p>
+        </div>
+        <div class="total">
+         <h5>Delivery fee</h5>
+         <p>$3</p>
+        </div>
+        <div class="account">
+         <p style="align-self: center;">Find promotion </p>
+         <aside>
+            <i class="fa-solid fa-abacus"></i>
+            <p>Add Coupon</p>
+         </aside>
+        </div>
+        <hr>
+        <div class="total">
+         <h5>Total</h5>
+         <p>$81</p>
+        </div>
+      </section>
+   </main>
+
+   <script src="./main.js"></script>
+</body>
+</html>

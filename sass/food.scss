@@ -1,0 +1,253 @@
+@forward  "burger";;
+$mobile :800px;
+@mixin phone {
+   @media (max-width:$mobile){
+      @content
+   }
+}
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body{
+   height: 100vh;
+   width: 100vw;
+   background-color: rgb(196, 155, 120);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   @include phone{
+      display: flex;
+   }
+}
+.menu-btn{
+   @include phone{
+      background-color: #ff6600;
+      box-shadow: none;
+   }
+}
+.icons{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: fit-content;
+   gap: 25px;
+   height: 93.5vh;
+   background-color: #ff6600;
+   padding: 20px 5px;
+   @include phone {
+      height: fit-content;
+      width: 83.5vw;
+      justify-content: space-around;
+      flex-direction: row;
+      background-color: #ff6600;
+      padding:10px 5px;
+   }
+}
+main{
+   width: 85vw;
+   height: 95vh;
+   background-color: white;
+   border: 5px solid orangered;
+   border-radius: 10px;
+   display: flex;
+   @include phone{
+      flex-direction: column;
+      gap: 10px;
+      height: fit-content;
+      background-color: white;
+      margin: auto;
+   }
+}
+.parent{
+   position: relative;
+}
+#search{
+   padding: 5px 15px;
+   width: 40px;
+   font-size: 18px;
+   outline: none;
+   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   border-radius: 100px;
+   transition: width 0.3s ease;
+
+}
+.button{
+   width: 40px;
+   padding: 10px 10px;
+   cursor: pointer;
+   border: 100px;
+   border: none;
+   background: #ff6600;
+   border-radius: 100px;
+   display: inline;
+   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   position: absolute;
+   top: 2%;
+   left: 0;
+   transition: transform 0.3s ease;
+}
+.parent.active #search{
+   width: 500px;
+   @include phone{
+      width: 420px;
+   }
+}
+.parent.active .button{
+   transform: translateX(510px);
+   @include phone {
+      transform: translate(430px);
+   }
+}
+.second{
+   padding: 20px 15px;
+   height: 83.5vh;
+   width: 700px;
+   @include phone{
+      height: fit-content;
+      padding: 0px 15px;
+   }
+
+}
+.fit{
+   background-image: url(../img/fitnessn\ food.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 250px;
+   width: 700px;
+   opacity: 0.8;
+   margin-top: 15px;
+   &:hover{
+      background-image: url(../img/streak.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.8;
+   }
+   @include phone{
+      width: 450px;
+
+   }
+   aside{
+      position: relative;
+      top: 60px;
+      left: 90px;
+      color: white;
+      line-height: 28px;
+      font-size: 20px;
+      .but{
+         width: fit-content;
+         height: fit-content;
+         padding: 10px 20px;
+         border: 2px solid white;
+      }
+   }
+}
+.fit:hover aside{
+   display: none;
+}
+.fit:hover .opacity{
+   
+   display: block;
+   position: relative;
+   top: 50px;
+   left: 90px;
+   color: white;
+   line-height: 28px;
+   font-size: 20px;
+}
+.opacity{
+   display: none;
+   .but{
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 20px;
+      border: 2px solid white;
+   }
+}
+.flex{
+   display: flex;
+   gap: 20px;
+   margin: 20px 0;
+   border-bottom: 1px solid gray;
+   padding-bottom: 10px;
+   @include phone{
+      flex-direction: column;
+      gap: 15px;
+      border-bottom: none;
+      left: 30%;
+      position: relative;
+   }
+   aside{
+      display: flex;
+      gap: 8px;
+      @include phone {
+        font-size: 20px;
+        font-weight: bold;
+          
+      }      
+     p {
+         border-bottom: 1px solid gray;
+         
+      }
+   }
+}
+.content{
+   width: 700px;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   transition: all 0.4s ease-in-out;
+   @include phone{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      left: 80px;
+   }
+   aside{
+      display: flex;
+      gap: 80px;
+
+   }
+   h5{
+      color: gray;
+   }
+   img{
+      width: 200px;
+      height: 120px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+         transform: scale(1.1);
+      }
+      @include phone{
+        width: 300px;
+        height: 200px;
+      }
+
+   }
+}
+.three{
+   height: 90.5vh;
+   margin: 0 15px 0 30px;
+   width: fit-content;
+   // background-color: rgba(0,0,0,0.2);
+   padding: 20px 30px;
+   transition: all 0.4s ease-in-out;
+   h5, hr{
+      color: gray;
+   }
+}
+
+.address{
+   margin: 20px 0px;
+   aside{
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+      h5{
+         color: gray;
+      }
+   }
+}
